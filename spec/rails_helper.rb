@@ -33,6 +33,8 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  #Time Helper
+  config.include ActiveSupport::Testing::TimeHelpers
   #FactoryBot
   config.include FactoryBot::Syntax::Methods
 
