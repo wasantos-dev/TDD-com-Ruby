@@ -2,6 +2,11 @@
 require 'webmock/rspec'
 require 'vcr'
 require 'capybara'
+require "rspec/json_expectations"
+
+require "json_matchers/rspec"
+
+JsonMatchers.schema_root = "spec/support/api/schemas"
 
 # Capybara
 Capybara.register_driver :chrome do |app|
